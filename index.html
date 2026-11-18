@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartSorter Pro — FlowUtils</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background: #0e0e0e; color: #f5f5f5; line-height: 1.6; }
+    .container { max-width: 920px; margin: 0 auto; padding: 40px 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 40px; border-bottom: 1px solid #222; }
+    .brand { font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; color: #fff; }
+    .brand span { color: #00c853; }
+    .badge { background: #1b2e22; color: #00e676; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin-bottom: 16px; }
+    h1 { font-size: 2.6rem; line-height: 1.2; margin-bottom: 16px; }
+    .subtitle { color: #a0a0a0; font-size: 1.15rem; max-width: 650px; margin-bottom: 30px; }
+    .cta-btn { background: #00c853; color: #000; font-weight: 800; font-size: 1.1rem; padding: 16px 32px; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; transition: 0.2s; }
+    .cta-btn:hover { background: #00e676; transform: translateY(-2px); }
+    .showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 50px 0; }
+    .card { background: #161616; border: 1px solid #262626; border-radius: 12px; padding: 16px; }
+    .card img { width: 100%; border-radius: 8px; margin-top: 10px; border: 1px solid #333; }
+    .card-label { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: #888; }
+    .card-label.after { color: #00e676; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 0; }
+    .feat { background: #161616; padding: 24px; border-radius: 12px; border: 1px solid #242424; }
+    .feat h3 { margin-bottom: 8px; color: #fff; font-size: 1.05rem; }
+    .feat p { color: #999; font-size: 0.95rem; }
+    .checkout-box { background: #161616; border: 2px solid #00c853; border-radius: 14px; padding: 32px; margin-top: 50px; }
+    .checkout-box h2 { margin-bottom: 8px; }
+    .iban-card { background: #1f1f1f; padding: 24px; border-radius: 10px; border: 1px solid #333; margin: 24px 0; }
+    .iban-row { display: flex; justify-content: space-between; align-items: center; background: #0e0e0e; padding: 14px 16px; border-radius: 8px; margin: 12px 0; border: 1px solid #2a2a2a; gap: 12px; flex-wrap: wrap; }
+    .iban-value { font-family: Consolas, monospace; font-size: 1.05rem; color: #00e676; font-weight: 700; word-break: break-all; }
+    .copy-btn { background: #2c2c2c; color: #fff; border: 1px solid #444; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    .copy-btn:hover { background: #00c853; color: #000; border-color: #00c853; }
+    .details-list { list-style: none; color: #ccc; font-size: 0.95rem; margin-top: 12px; }
+    .details-list li { margin-bottom: 6px; }
+    .details-list strong { color: #fff; }
+    .delivery-step { background: #1b2e22; padding: 16px; border-radius: 8px; color: #d0f5df; font-size: 0.95rem; }
+    footer { text-align: center; color: #666; font-size: 0.85rem; margin-top: 60px; padding-top: 20px; border-top: 1px solid #222; }
+    @media (max-width: 700px) { .showcase { grid-template-columns: 1fr; } h1 { font-size: 2rem; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">FLOW<span>UTILS</span></div>
+      <a href="#buy" class="cta-btn" style="padding: 10px 20px; font-size: 0.95rem;">Get SmartSorter — €4.99</a>
+    </header>
+
+    <section style="padding-top: 50px;">
+      <div class="badge">Windows 10 / 11 • Native C# Standalone</div>
+      <h1>Clean Your Messy Folders in 1 Second.</h1>
+      <p class="subtitle">Stop manually dragging hundreds of PDFs, ZIPs, images, and scripts. SmartSorter Pro organizes your Downloads, Desktop, or Study folders with a single click.</p>
+      <a href="#buy" class="cta-btn">Buy SmartSorter Pro — €4.99</a>
+    </section>
+
+    <section class="showcase">
+      <div class="card">
+        <div class="card-label">Before (25+ Mixed Files)</div>
+        <img src="before.jpg" alt="Messy folder before SmartSorter" />
+      </div>
+      <div class="card">
+        <div class="card-label after">After (Sorted in &lt;1s)</div>
+        <img src="after.jpg" alt="Organized folders after SmartSorter" />
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feat">
+        <h3>Zero Installation</h3>
+        <p>Standalone native Windows .exe. No Python, no runtime setup, 100% offline execution.</p>
+      </div>
+      <div class="feat">
+        <h3>Custom JSON Rules</h3>
+        <p>Add your own folder names and file extensions anytime directly from the built-in config editor.</p>
+      </div>
+      <div class="feat">
+        <h3>Safe Duplicate Protection</h3>
+        <p>Existing files are never overwritten—duplicates are automatically renamed cleanly.</p>
+      </div>
+    </section>
+
+    <section id="buy" class="checkout-box">
+      <h2>Instant Purchase — €4.99 (Lifetime License)</h2>
+      <p style="color: #aaa;">Includes <strong>SmartSorter.exe</strong> + <strong>Quick Start PDF Guide</strong>. Pay via Instant SEPA Bank Transfer:</p>
+
+      <div class="iban-card">
+        <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: #888; font-weight: 700;">SEPA Bank Transfer Details</div>
+        <div class="iban-row">
+          <span id="iban-text" class="iban-value">5273291014890390</span>
+          <button id="copy-btn" class="copy-btn" onclick="copyIban()">Copy IBAN</button>
+        </div>
+        <ul class="details-list">
+          <li><strong>Beneficiary:</strong> Edoardo Miori</li>
+          <li><strong>Amount:</strong> €4.99 (Use Instant SEPA transfer for immediate delivery)</li>
+          <li><strong>Payment Reference:</strong> SmartSorter</li>
+        </ul>
+      </div>
+
+      <div class="delivery-step">
+        <strong>How to receive your download:</strong> Send a screenshot of the transfer receipt on Telegram to <strong>@Edo.10</strong> (or via email to <strong>edoardo.miori.10@gmail.com</strong>). You will receive <strong>SmartSorter_Pro_v1.0.zip</strong> immediately.
+      </div>
+    </section>
+
+    <footer>
+      © 2026 FlowUtils Software. Built for Windows.
+    </footer>
+  </div>
+
+  <script>
+    function copyIban() {
+      const iban = document.getElementById('iban-text').innerText.trim();
+      navigator.clipboard.writeText(iban).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.innerText = 'Copied!';
+        setTimeout(() => { btn.innerText = 'Copy IBAN'; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
